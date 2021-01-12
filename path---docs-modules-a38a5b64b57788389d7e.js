@@ -1,1 +1,0 @@
-webpackJsonp([0x6a77958bc385],{829:function(o,s){o.exports={data:{modulesList:{edges:[{node:{fields:{slug:"/docs/modules/Internationalization/kind/"}}},{node:{fields:{slug:"/docs/modules/Localization/$L/"}}},{node:{fields:{slug:"/docs/modules/Localization/Text/"}}},{node:{fields:{slug:"/docs/modules/Localization/util/"}}}]}},pathContext:{}}}});
