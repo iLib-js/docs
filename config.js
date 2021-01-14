@@ -6,11 +6,10 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
-    logoLink: 'https://hasura.io/learn/',
-    title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
-    githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
+    logo: '',
+    logoLink: 'https://github.com/iLib-js/',
+    title: '',
+    githubUrl: 'https://github.com/iLib-js/iLib',
     helpUrl: '',
     tweetText: '',
     social: ``,
@@ -26,10 +25,12 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
-      '/codeblock',
+      '/i18n',
+      '/l10n',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+      //'/i18n',// add trailing slash if enabled above
+      //'/l10n',
     ],
     links: [{ text: 'iLib-js', link: 'https://github.com/iLib-js' }],
     frontline: false,
@@ -42,7 +43,7 @@ const config = {
     description: 'Documentation built with mdx.',
     ogImage: null,
     docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
-    favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
+    favicon: '',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.

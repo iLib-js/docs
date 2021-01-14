@@ -62,7 +62,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
             headerTitle
             githubUrl
             helpUrl
-            tweetText
             logo {
               link
               image
@@ -76,21 +75,17 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
       }
     `}
     render={data => {
-      const logoImg = require('./images/logo.svg');
-
-      const twitter = require('./images/twitter.svg');
+      const logoImg = require('./images/header-logo.svg');
 
       const discordBrandsBlock = require('./images/discord-brands-block.svg');
 
-      const twitterBrandsBlock = require('./images/twitter-brands-block.svg');
-
       const {
         site: {
-          siteMetadata: { headerTitle, githubUrl, helpUrl, tweetText, logo, headerLinks },
+          siteMetadata: { headerTitle, githubUrl, helpUrl, logo, headerLinks },
         },
       } = data;
 
-      const finalLogoLink = logo.link !== '' ? logo.link : 'https://hasura.io/';
+      const finalLogoLink = logo.link !== '' ? logo.link : 'https://github.com/iLib-js';
 
       return (
         <div className={'navBarWrapper'}>
@@ -103,10 +98,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                   alt={'logo'}
                 />
               </Link>
-              <div
-                className={'headerTitle displayInline'}
-                dangerouslySetInnerHTML={{ __html: headerTitle }}
-              />
             </div>
             {config.header.social ? (
               <ul
@@ -140,36 +131,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                     );
                   }
                 })}
-                {helpUrl !== '' ? (
-                  <li>
-                    <a href={helpUrl}>
-                      <img src={help} alt={'Help icon'} />
-                    </a>
-                  </li>
-                ) : null}
-
-                {tweetText !== '' ? (
-                  <li>
-                    <a
-                      href={'https://twitter.com/intent/tweet?&text=' + tweetText}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img className={'shareIcon'} src={twitter} alt={'Twitter'} />
-                    </a>
-                  </li>
-                ) : null}
-                {tweetText !== '' || githubUrl !== '' ? (
-                  <li className="divider hiddenMobile"></li>
-                ) : null}
-                {config.header.social ? (
-                  <li className={'hiddenMobile'}>
-                    <ul
-                      className="socialWrapper"
-                      dangerouslySetInnerHTML={{ __html: config.header.social }}
-                    ></ul>
-                  </li>
-                ) : null}
                 {githubUrl !== '' ? (
                   <li className={'githubBtn'}>
                     <GitHubButton
