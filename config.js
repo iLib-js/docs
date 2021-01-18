@@ -27,8 +27,10 @@ const config = {
       '/introduction', // add trailing slash if enabled above
       '/i18n',
       '/l10n',
+      '/knowledge',
     ],
     collapsedNav: [
+      '/knowledge',
       //'/i18n',// add trailing slash if enabled above
       //'/l10n',
     ],
