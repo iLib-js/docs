@@ -10,7 +10,6 @@ import LoadingProvider from './mdxComponents/loading';
 import { DarkModeSwitch } from './DarkModeSwitch';
 
 const isSearchEnabled = config.header.search && config.header.search.enabled ? true : false;
-
 let searchIndices = [];
 
 if (isSearchEnabled && config.header.search.indexName) {
@@ -74,8 +73,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
     `}
     render={data => {
       const logoImg = require('./images/header-logo.svg');
-
-      const discordBrandsBlock = require('./images/discord-brands-block.svg');
 
       const {
         site: {
