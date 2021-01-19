@@ -28,24 +28,29 @@ const config = {
       '/i18n',
       '/l10n',
       '/knowledge',
+      '/aboutus',
     ],
     collapsedNav: [
       '/knowledge',
       //'/i18n',// add trailing slash if enabled above
       //'/l10n',
     ],
-    links: [{ text: 'iLib-js', link: 'https://github.com/iLib-js' }],
+    links: [{ text: 'iLib-js Project', link: 'https://github.com/iLib-js' },
+    { text: 'iLib', link: 'https://ilib-js.github.io/iLib/docs/' }],
     frontline: false,
     ignoreIndex: true,
     title:
       "<div class='greenCircle'></div>I18N &amp; L10N<div class='greenCircle'></div>",
   },
   siteMetadata: {
-    title: 'Gatsby Gitbook Boilerplate | Hasura',
+    title: '',
     description: 'Documentation built with mdx.',
     ogImage: null,
     docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
     favicon: '',
+  },
+  footer: {
+    copyright: 'Copyright © 2021,&nbsp;&nbsp;&nbsp; JEDLSoft',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.

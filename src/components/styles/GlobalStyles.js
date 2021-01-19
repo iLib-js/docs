@@ -110,6 +110,7 @@ export const baseStyles = css`
   .navBarULRight {
     /* position: absolute;
   right: 30px; */
+  color: #ffffff;
   }
   .githubIcon {
     width: 15px;
@@ -279,6 +280,13 @@ export const baseStyles = css`
     display: flex;
     align-items: center;
   }
+
+  .navBarFooter {
+    min-width: 300px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+  }
   .navBarBrand {
     padding: 0px 0px;
     display: flex;
@@ -367,6 +375,7 @@ export const baseStyles = css`
     }
   }
   /* Header section ends here */
+
   .sidebarTitle {
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
     background-color: #f8f8f8;
@@ -794,6 +803,7 @@ export const baseStyles = css`
       display: flex;
       align-items: center;
       margin: 7.5px 0px;
+      color: white;
     }
     .navBarUL li {
       height: 37px;
@@ -818,6 +828,13 @@ export const baseStyles = css`
     }
 
     .navBarHeader {
+      display: flex;
+      min-width: auto;
+      padding-right: 0;
+      align-items: center;
+    }
+
+    .navBarFooter {
       display: flex;
       min-width: auto;
       padding-right: 0;
@@ -876,6 +893,11 @@ export const baseStyles = css`
       min-width: 240px;
       flex: initial;
     }
+    .navBarFooter {
+      min-width: 200px;
+      flex: initial;
+    }
+
     .githubBtn {
       padding: 10px 10px;
     }
