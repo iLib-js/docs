@@ -3,15 +3,6 @@
 SW Internationalization & Localization document with iLib-js/ project
 
 
-## Motivation
-
-
-## 🔥 Features
-
-## 🔗 Live Demo
-
-
-
 ## 🚀 Quickstart
 
 Get started by running the following commands:
