@@ -8,7 +8,10 @@ metaDescription: "This is the meta description"
 # Contact US
 * [Goun Lee](https://github.com/gouniLee)
 
-# Use cases
+#### Bug Reports
 
+# Use Cases
+* webOS Platform for LG Eletronics.
 
-# LICENSE
+# Legal
+All of iLib-js/ project is licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).

@@ -1,6 +1,6 @@
 ---
-title: "Internationalization"
-metaTitle: "Syntax Highlightingdddd is the meta title tag for this page"
+title: "webOS C/C++ Application"
+metaTitle: "Syntax Highlighting is the meta title tag for this page"
 metaDescription: "This is the meta description for this page"
 ---
 
