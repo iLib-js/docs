@@ -15,3 +15,11 @@ $ npm start
 ```
 
 Visit `http://localhost:8000/` to view the app.
+
+## ☁️ Deploy
+
+Deploy to `https://ilib-js.github.io/docs/`
+
+```
+$ npm run deploy
+```
