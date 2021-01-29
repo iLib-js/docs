@@ -27,6 +27,7 @@ const config = {
       '/introduction', // add trailing slash if enabled above
       '/i18n',
       '/l10n',
+      '/webos',
       '/knowledge',
       '/aboutus',
     ],
