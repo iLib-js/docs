@@ -9,7 +9,7 @@ Overview
 
 
 If your applications or serves need localization string,
-First, You need to Write code for your apps and services using the provided internationalization (i18n) libraries. 
+You need to Write code for your apps and services using the provided internationalization (i18n) libraries. 
 
 Please refer to the following explanation depends on your programming languages.
 
@@ -33,7 +33,7 @@ toIString('Close'); // => an ilib IString representing "Close" in the current lo
 Non Enact
 -------------
 
-For web apps that do not utilize Enact framework, use the  [__ResBundle.getString__](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ResBundle.html#getString) API of ResBundle feature in iLib.
+For web apps that do not utilize Enact framework, use the  [ResBundle.getString](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ResBundle.html#getString) API of ResBundle feature in iLib.
 
 
 1. First, load the iLib library ilib-web.js through the  __script__ tag.
@@ -53,7 +53,7 @@ For instance, if you’re developing a built-in web app, the iLib library can be
 <script src=file://usr/share/javascript/ilib/lib/ilib-web.js type="text/javascript"></script>
 ```
 
-2. After that, use the [__ResBundle.getString__](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ResBundle.html#getString) method of iLib as shown in the example below:
+2. After that, use the [ResBundle.getString](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ResBundle.html#getString) method of iLib as shown in the example below:
 
 ```javascript
 var ResBundle = require("ResBundle.js");
@@ -71,7 +71,9 @@ If you are a nodejs developer, you need to load _iLib_ first using the built-in 
 
 ```javascript
 var ResBundle = require("/usr/share/javascript/ilib/lib/ResBundle");
+```
 
+```javascript
 var rb = new ResBundle({locale: "ko-KR"});
 var str = rb.getString("Hello");
 var jsStr = str.toString()
@@ -81,7 +83,7 @@ QML
 =============
 
 It follows the general rules.
-Strings in QML can be marked for translation using __qsTr__, __qsTranslate()__, __qsTrId()__, __QT_TR_NOOP()__, __QT_TRANSLATE_NOOP()__, and __QT_TRID_NOOP()__. Pleas refer to the [official documentation](https://doc.qt.io/qt-5/qtquick-internationalization.html).
+Strings in QML can be marked for translation using [qsTr](https://doc.qt.io/qt-5/qml-qtqml-qt.html#qsTr-method), [qsTranslate](https://doc.qt.io/qt-5/qml-qtqml-qt.html#qsTranslate-method), [qsTrId](https://doc.qt.io/qt-5/qml-qtqml-qt.html#qsTrId-method), [QT_TR_NOOP](https://doc.qt.io/qt-5/qml-qtqml-qt.html#qsTrIdNoOp-method), [QT_TRANSLATE_NOOP](https://doc.qt.io/qt-5/qml-qtqml-qt.html#qsTranslateNoOp-method), and [QT_TRID_NOOP](https://doc.qt.io/qt-5/qtglobal.html#QT_TRID_NOOP). Pleas refer to the [official documentation](https://doc.qt.io/qt-5/qtquick-internationalization.html).
 
 ```qml
 
@@ -100,8 +102,14 @@ This is a small library that allows you to load sets of strings known as a resou
 in the same way that the Javascript code does. This class retrieves translations
 for strings, and formats them with parameters for display to the user.
 
-```c
+#### C
 
+```
+const char* resBundle_getLocString(ResBundleC * bundle, const char * source);
+const char* resBundle_getLocStringWithKey(ResBundleC * bundle, const char * key, const char * source);
+```
+Usage:
+```c
 #include <webosi18n_C.h>
 // put this include at the top
 const char* locale = "en-US";
@@ -113,8 +121,14 @@ resBundle_getLocString(resBundle, "String 1");
 
 ```
 
-This does the same thing as the C code above:
+#### C++
 
+```
+const string& ResBundle::getLocString(const string& source)
+const string& ResBundle::getLocString(const string& key, const string& source)
+```
+
+Usage:
 ```cpp
 // put this include at the top
 #include <webosi18n.h>

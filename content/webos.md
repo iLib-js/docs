@@ -17,3 +17,5 @@ webOS I18N and L10N
 =============
 Basically, webOS adopts great opensource project and support features. which is [__iLib__ ](https://github.com/iLib-js/iLib )and [__lotool__](https://github.com/iLib-js/loctool).
 
+![webosImg](./images/beanbird.png)
+

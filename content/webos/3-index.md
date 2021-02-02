@@ -24,7 +24,9 @@ Write a config file
 In order to use __loctool__, it needs configuration file called `project.json`. and Place it to the project root.
 Here's example for webOS Enact application. Depends on the project type, some values need to write properly. (projectType, resourceDirs, resouceFileType, plugins)
 
-### Enact application
+### Example
+
+1) Enact application
 ```json
 {
     "name": "com.webos.app.home",
@@ -51,7 +53,7 @@ Here's example for webOS Enact application. Depends on the project type, some va
 }
 ```
 
-### QML application
+2) QML application
 ```json
 {
     "name": "ime-manager",
