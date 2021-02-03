@@ -105,13 +105,20 @@ for strings, and formats them with parameters for display to the user.
 #### C
 
 ```
-const char* resBundle_getLocString(ResBundleC * bundle, const char * source);
-const char* resBundle_getLocStringWithKey(ResBundleC * bundle, const char * key, const char * source);
+const char* resBundle_getLocString(
+            ResBundleC * bundle,
+            const char * source);
+
+const char* resBundle_getLocStringWithKey(
+            ResBundleC * bundle,
+            const char * key,
+            const char * source);
 ```
 Usage:
 ```c
-#include <webosi18n_C.h>
 // put this include at the top
+#include <webosi18n_C.h>
+
 const char* locale = "en-US";
 const char* file = "cstrings.json";
 const char* resources_path = "/usr/share/localization/samplec";
