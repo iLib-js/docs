@@ -27,7 +27,7 @@ Enact provides functions called [$L](https://enactjs.com/docs/modules/i18n/$L/) 
 import $L, {toIString} from '@enact/i18n/$L';
 
 $L('Close');        // => "Close" in the current locale
-toIString('Close'); // => an ilib IString representing "Close" in the current locale
+
 ```
 
 Non Enact

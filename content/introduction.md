@@ -16,5 +16,5 @@ Internationalization is the process of preparing your app’s content for locali
 ## Why internationalization and localization are needed?
 
 
-## what kind of things I can find out here?
+## What kind of things I can find out here?
 
