@@ -7,7 +7,7 @@ const config = {
   },
   header: {
     logo: '',
-    logoLink: 'https://github.com/iLib-js/',
+    logoLink: 'https://ilib-js.github.io/docs/',
     title: '',
     githubUrl: 'https://github.com/iLib-js/iLib',
     helpUrl: '',
@@ -27,6 +27,7 @@ const config = {
       '/introduction', // add trailing slash if enabled above
       '/i18n',
       '/l10n',
+      '/webos',
       '/knowledge',
       '/aboutus',
     ],
@@ -46,7 +47,7 @@ const config = {
     title: '',
     description: 'Documentation built with mdx.',
     ogImage: null,
-    docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
+    docsLocation: 'https://github.com/iLib-js/docs/tree/master/content',
     favicon: '',
   },
   footer: {

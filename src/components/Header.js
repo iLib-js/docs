@@ -80,7 +80,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
         },
       } = data;
 
-      const finalLogoLink = logo.link !== '' ? logo.link : 'https://github.com/iLib-js';
+      const finalLogoLink = logo.link !== '' ? logo.link : 'https://ilib-js.github.io/docs/';
 
       return (
         <div className={'navBarWrapper'}>

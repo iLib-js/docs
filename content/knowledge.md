@@ -1,11 +1,5 @@
 ---
 title: "I18N Knowledge"
-metaTitle: "Syntax Highlightingdddd is the meta title tag for this page"
-metaDescription: "This is the meta description for this page"
+metaTitle: "I18N Knowledge"
+metaDescription: "I18N Knowledge"
 ---
-
-The following is a code block with JavaScript language syntax highlighting.
-
-```javascript
-import React from 'react';
-```
