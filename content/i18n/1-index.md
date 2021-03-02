@@ -1,6 +1,6 @@
 ---
-title: "Web Application"
-metaTitle: "Web Application page"
-metaDescription: "Web Application page"
+title: "Getting iLib into your project"
+metaTitle: "Integration page"
+metaDescription: "Integration page"
 ---
 
