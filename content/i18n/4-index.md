@@ -10,6 +10,24 @@ A lot of other information about a locale is available via the [LocaleInfo](http
 ```javascript
 var LocaleInfo = require("<path-to-ilib>/lib/LocaleInfo.js");
 var li = new LocaleInfo({locale: "ru-RU"});
+
+li.getScript()
+//'Cyrl'
+li.getClock()
+//'24'
+li.getCurrency()
+//'RUB'
+li.getFirstDayOfWeek()
+//1
+li.getMeridiemsStyle()
+//'gregorian'
+li.getPaperSize()
+//'A4'
+li.getTimeZone()
+//'Europe/Moscow'
+li.getUnits()
+//'metric'
+
 ```
 Things that the locale information instance can tell you:
 
