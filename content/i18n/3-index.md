@@ -184,7 +184,7 @@ var percentString = fmt.format(0.893453);
 
 ### Units
 Various unit date is locale sensitive:Temperature, Speed, etc  
-Unit are formatted with the [UnitFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/UnitFmt.html) class.
+Unit are formatted with the [UnitFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/UnitFmt.html) class.  
 If you see more in detail, Please visit the [here](https://github.com/iLib-js/iLib/blob/development/docs/tutorial/units.md).
 
 |Locale|Temperature|Vehicle Distance|Vehicle Speed|Fuel Volume|

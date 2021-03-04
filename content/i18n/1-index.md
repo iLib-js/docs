@@ -12,7 +12,7 @@ on various OS's (including mobile), nodejs, webOS, Qt/QML, RingoJS, React/Enact,
 
 
 ### Documentation
-* Please vesit the [link](https://ilib-js.github.io/iLib/docs/).
+* Please visit the [link](https://ilib-js.github.io/iLib/docs/).
 * Getting started guide is [here](https://ilib-js.github.io/iLib/docs/GettingStarted.html).  
 
 
