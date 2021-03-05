@@ -57,13 +57,13 @@ Date/time ranges are periods of time with a specific start and end points Can be
 Example output: "Mar 11-14, 2013"
 
 ``` javascript
-var DateFactory =require("<path-to-ilib>/lib/DateFactory");
+var DateFactory = require("<path-to-ilib>/lib/DateFactory");
 var DateRngFmt = require("<path-to-ilib>/lib/DateRngFmt.js")
 
 var start = DateFactory({year:2021, month:3, day:4, hour:14, minute:19});
 var end = DateFactory({year:2021, month:4, day:14, hour:14, minute:19});
 
-var fmt=new DateRngFmt({locale:"de-DE", length:"full"});
+var fmt = new DateRngFmt({locale:"de-DE", length:"full"});
 var d = fmt.format(start, end);
 // 4. März – 14. April 2021
 ```
@@ -75,7 +75,7 @@ Example output: "36 hours, 24 minutes, and 37 seconds"
 ``` javascript
 var DurFmt = require("<path-to-ilib>/lib/DurationFmt.js")
 
-var fmt=new DurFmt({locale:"en-US", length:"full"});
+var fmt = new DurFmt({locale:"en-US", length:"full"});
 
 var result = fmt.format({
             year:1, month:1, week:1, day:1,
@@ -107,7 +107,13 @@ var now = DateFactory({type: "hebrew"});
 ```
 #### Calendar Information
 Information about a calendar can be retrieved using the Cal.* classes
-Use  a factory method to create the other calendar types
+```javascript
+var PersianCal = require("<path-to-ilib>/lib/PersianCal.js");
+var cal = new PersianCal();
+cal.getNumMonths(1392)
+// 12
+```
+Use a factory method to create the other calendar types
 
 ```javascript
 var CalendarFactory = require("<path-to-ilib>/lib/CalendarFactory.js");
@@ -199,8 +205,8 @@ If you see more in detail, Please visit the [here](https://github.com/iLib-js/iL
 var MeasurementFactory = require("<path-to-ilib>/lib/MeasurementFactory")
 var UnitFmt = require("<path-to-ilib>/lib/UnitFmt");
 
-var m1=MeasurementFactory({unit:"celsius", amount:31});
-var uf=new UnitFmt({locale:"en-US", length:"short", autoConvert:true});
+var m1 = MeasurementFactory({unit:"celsius", amount:31});
+var uf = new UnitFmt({locale:"en-US", length:"short", autoConvert:true});
 uf.format(m1)
 // '87.8°F'
 ```

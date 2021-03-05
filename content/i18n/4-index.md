@@ -46,7 +46,7 @@ Things that the locale information instance can tell you:
 A information about a Script is available via the [ScriptInfo](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ScriptInfo.html) class:  
 Thigs that the Script information instance can tell you:  
 * The 4-letter ISO 15924 identifier 
-* The ISO 15924 code numver
+* The ISO 15924 code number
 * The name of this script in English
 * the usual direction that text in this script is written in
 * and more
@@ -66,11 +66,11 @@ si.getScriptDirection()
 ```
 ### Currency Info
 A information about a Currency is available via the [Currency](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/Currency.html) class: 
-Thigs that the Script information instance can tell you:  
+Thigs that the Currency information instance can tell you:  
 * The ISO 4217 currency code
 * The locale for this currency
 * the name of the currency in English
-* The sigh commonly used to represent this currency.
+* The sign commonly used to represent this currency.
 * and more
 
 ```javascript

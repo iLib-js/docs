@@ -65,7 +65,7 @@ var str = template.format({n: 15});
 // str now has the value "There are 15 objects."
 ```
 
-**`rb.getString()` returns an IString instance, so the results can be used for formatting right away.**  
+`rb.getString()` returns an IString instance, so the results can be used for formatting right away.  
 [IString](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/IString.html) has all the same methods as an intrinsic string, so it is almost a replacement.  
 It cannot be used in certain places that require an intrinsic string.  
 Must call the `toString()` method to convert to an intrinsic string.
