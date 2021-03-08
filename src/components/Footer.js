@@ -18,10 +18,8 @@ const Footer = () => (
       return (
         <div className={'navBarWrapper'}>
           <nav className={'navBarDefault'}>
-            <div className={'navBarFooter'}>
-            </div>
-            <div id="navbar" className={'topnav'}>
-              <ul className='navBarUL navBarNav navBarULRight'
+            <div id="navbar" className={'topnav footerAlign'}>
+              <ul className='navBarUL navBarNav navBarULRight navBarFooterText'
                   dangerouslySetInnerHTML={{ __html: config.footer.copyright }}>
               </ul>
             </div>

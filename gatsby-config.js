@@ -20,6 +20,12 @@ const plugins = [
     }
   },
   {
+    resolve: 'gatsby-plugin-preconnect',
+    options: {
+      domains: ['https://wcbb1vvlrc-dsn.algolia.net', 'https://api.github.com'],
+    },
+  },
+  {
     resolve: 'gatsby-plugin-mdx',
     options: {
       gatsbyRemarkPlugins: [
@@ -38,15 +44,11 @@ const plugins = [
     }
   },
   {
-    resolve: `gatsby-plugin-gtag`,
-    options: {
-      // your google analytics tracking id
-      trackingId: config.gatsby.gaTrackingId,
-      // Puts tracking script in the head instead of the body
-      head: true,
-      // enable ip anonymization
-      anonymize: false,
-    },
+    resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: config.gatsby.gaTrackingId,
+        includeInDevelopment: false,
+      },
   },
 ];
 // check and add algolia
