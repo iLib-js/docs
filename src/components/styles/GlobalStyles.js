@@ -112,6 +112,10 @@ export const baseStyles = css`
   right: 30px; */
   color: #ffffff;
   }
+
+  .navBarFooterText {
+    color: white;
+  }
   .githubIcon {
     width: 15px;
     margin-right: 5px;
@@ -835,9 +839,9 @@ export const baseStyles = css`
     }
 
     .navBarFooter {
+      min-width: 300px;
+      padding-right: 20px;
       display: flex;
-      min-width: auto;
-      padding-right: 0;
       align-items: center;
     }
 
