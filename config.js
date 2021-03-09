@@ -37,8 +37,8 @@ const config = {
             '/knowledge', // add trailing slash if enabled above
         ],
         "links": [
-            { "text": "iLib", "link": "https://github.com/iLib-js/iLib"},
-            { "text": "loctool", "link": "https://github.com/iLib-js/loctool"},
+            { "text": "iLib", "link": "https://ilib-js.github.io/iLib/docs/"},
+            { "text": "loctool", "link": "https://ilib-js.github.io/loctool/"},
         ],
         "frontline": false,
         "ignoreIndex": true,
