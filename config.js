@@ -28,12 +28,12 @@ const config = {
             '/introduction', // add trailing slash if enabled above
             '/i18n',
             '/l10n',
+            '/integration',
             '/knowledge',
-            '/webos',
             '/aboutus',
         ],
         "collapsedNav": [
-            '/webos',
+            '/integration',
             '/knowledge', // add trailing slash if enabled above
         ],
         "links": [

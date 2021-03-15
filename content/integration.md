@@ -1,9 +1,8 @@
 ---
-title: "webOS Platform"
+title: "Platform Integration"
 metaTitle: "webOS Platform page"
 metaDescription: "webOS Platform page"
 ---
-
 
 Overview
 =============
