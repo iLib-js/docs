@@ -1,6 +1,6 @@
 ---
-title: "CLDR"
-metaTitle: "CLDR"
-metaDescription: "CLDR"
+title: "I18N Basic"
+metaTitle: "Basic"
+metaDescription: "Basic"
 ---
 
