@@ -40,6 +40,7 @@ Plugin list
 | [ilib-loctool-webos-javascript](https://github.com/iLib-js/ilib-loctool-webos-javascript) | extract strings from Javascript language files for webOS |
 | [ilib-loctool-webos-json-resource](https://github.com/iLib-js/ilib-loctool-webos-json-resource) | extract strings from javascript, C/C++ files and produce translated json files for webOS |
 | [ilib-loctool-webos-qml](https://github.com/iLib-js/ilib-loctool-webos-qml) |extract strings from QML language files for webOS |
-| [ilib-loctool-webos-ts-resource](https://github.com/iLib-js/ilib-loctool-webos-ts-resource) | extract strings from webOS QML files and produce translated QT's TS format files for webOS  |
+| [ilib-loctool-webos-ts-resource](https://github.com/iLib-js/ilib-loctool-webos-ts-resource) | extract strings from webOS QML files and produce translated QT's TS format files for webOS |
+| [ilib-loctool-salesforce-metaxml](https://github.com/iLib-js/ilib-loctool-salesforce-metaxml) | extract strings from -meta.xml files and produced translated meta.xml files for Salesforce |
 | [ilib-loctool-json](https://github.com/iLib-js/ilib-loctool-json) | extract strings json files and produce translated json files |
-| [ilib-loctool-po](https://github.com/iLib-js/ilib-loctool-po) | extract strings from po files and produce translated po files  |
+| [ilib-loctool-po](https://github.com/iLib-js/ilib-loctool-po) | extract strings from po files and produce translated po files |
