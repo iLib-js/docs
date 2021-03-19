@@ -9,7 +9,9 @@ Plugins
 
 The loctool is driven by plugins that know how to parse various types of files, and write out the appropriate localized output.
 
-Plugins can be loaded dynamically using the “custom” type of project and listing out the required plugins in the “plugins” section of the project.json config file. Plugins are implemented as separate node modules similar to the way Babel or Webpack plugins are implemented.
+Plugins can be loaded dynamically using the `custom` type of project and listing out the required plugins in the “plugins” section of the project.json config file. Plugins are implemented as separate node modules similar to the way Babel or Webpack plugins are implemented.
+
+If you would like to write new one, read the [How to Write a loctool Plugin](https://github.com/iLib-js/loctool/blob/development/docs/Plugins.md) documentation for all the details.
 
 Plugin list
 =====

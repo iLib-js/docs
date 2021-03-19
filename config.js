@@ -2,7 +2,7 @@ const config = {
     "gatsby": {
         "pathPrefix": "/docs",
         "siteUrl": "https://github.com/iLib-js",
-        "gaTrackingId": null,
+        "gaTrackingId": "docs",
         "trailingSlash": false
     },
     "header": {
