@@ -22,7 +22,3 @@ iLib and loctool adopts [BCP(Best Crrent Practice)47](https://tools.ietf.org/htm
 | ko-KR | Korean for Korea |
 | uz-Cyrl-UZ | Cyrillic Uzbek for Uzbekistan  |
 | zh-Hans-CN | Simplified Chinese for China |
-
-
-
-#### Locale
