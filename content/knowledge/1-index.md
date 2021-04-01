@@ -5,7 +5,9 @@ metaDescription: "Locale"
 ---
 
 ### Locale
-In computing a locale is a set of parameters that defines the user's language, region and any special variant preferences that the user wants to see in their user interface. Usually a locale identifier consists of at least a language code and a country/region code.  
+> In computing a locale is a set of parameters that defines the user's language, region and any special variant preferences that the user wants to see in their user interface. Usually a locale identifier consists of at least a language code and a country/region code.  
+
+  _from Wikipedia_
 
 Normally, Locale is any combination of 
  - language: the lower-case 2 or 3 letter. It follows [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code
