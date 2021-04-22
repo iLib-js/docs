@@ -2,7 +2,7 @@ const config = {
     "gatsby": {
         "pathPrefix": "/docs",
         "siteUrl": "https://github.com/iLib-js",
-        "gaTrackingId": null,
+        "gaTrackingId": "docs",
         "trailingSlash": false
     },
     "header": {
@@ -28,12 +28,12 @@ const config = {
             '/introduction', // add trailing slash if enabled above
             '/i18n',
             '/l10n',
+            '/integration',
             '/knowledge',
-            '/webos',
             '/aboutus',
         ],
         "collapsedNav": [
-            '/webos',
+            '/integration',
             '/knowledge', // add trailing slash if enabled above
         ],
         "links": [
