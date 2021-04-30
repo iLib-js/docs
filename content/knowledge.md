@@ -5,4 +5,5 @@ metaDescription: "I18N Knowledge"
 ---
 
 * [Locale](/knowledge/1-index)
-* [TimeZone](/knowledge/1-index)
+* [TimeZone](/knowledge/2-index)
+* [CLDR](/knowledge/3-index)
