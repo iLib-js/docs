@@ -39,6 +39,7 @@ const config = {
         "links": [
             { "text": "iLib", "link": "https://ilib-js.github.io/iLib/docs/"},
             { "text": "loctool", "link": "https://ilib-js.github.io/loctool/"},
+            { "text": "loctool samples", "link": "https://github.com/iLib-js/ilib-loctool-samples/"},
         ],
         "frontline": false,
         "ignoreIndex": true,

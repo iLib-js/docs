@@ -7,14 +7,13 @@ metaDescription: "Process page"
 loctool have plugin for QML app's localization. `ilib-loctool-webos-qml` and `iilb-loctool-webos-ts-resource`
 It's implemented for webOS QML application, but it could be used for general QML application too.
 
-Extract localizable Strings
+1) Write code - Extract localizable Strings
 ====
 `ilib-loctool-webos-qml` plugin takes `qml` and `js` type files and extract localizable strings.  
 If you use the following methods and macros, the text inside it will be extracted as a localizable string.
 
 Qt QML Type - Methods
------
-
+---
 | Method  | Description  |
 |---|---|
 | [qsTr](https://doc.qt.io/qt-6/qml-qtqml-qt.html#qsTr-method) |Returns a translated string identified by id. If no matching string is found, the id itself is returned.|
@@ -24,7 +23,7 @@ Qt QML Type - Methods
 
 
 Global Qt Declarations - Macros
------
+---
 
 | Method  | Description  |
 |---|---|
@@ -35,7 +34,27 @@ Global Qt Declarations - Macros
 | [QT_TRANSLATE_N_NOOP](https://doc.qt.io/qt-6/qtglobal.html#QT_TRANSLATE_N_NOOP) |Marks the UTF-8 encoded string literal sourceText for numerator dependent delayed translation in the given context. |
 
 
-Generate localization data
+2) Write config file for loctool
+====
+Make sure `resourceDirs`, `resourceFileType` and `plugin` are written correctly in `project.json` file.
+example)
+
+```
+...
+"resourceDirs": {
+    "ts":"resources"
+},
+"resourceFileTypes": {
+    "ts":"ilib-loctool-webos-ts-resource"
+},
+"plugins": [
+    "ilib-loctool-webos-qml",
+    "ilib-loctool-webos-appinfo-json"
+],
+...
+```
+
+3) Run the loctool - Generate localization data (*.ts file)
 ====
 `ilib-loctool-webos-ts` plugin localization data as [TS file format](https://doc.qt.io/qt-5/linguist-ts-file-format.html).
 TS file format used by QT Linguist.  
@@ -56,7 +75,7 @@ Here's simple ts file form.
 ```
 
 
-Generate QML file format
+4) Generate QML file format (*.qm file)
 ====
 With ts files from loctool running, Developer need to run [lrelease](https://doc.qt.io/qt-5/linguist-manager.html#using-lrelease) to get QML file format. It's compact binary format that is used by the localized application.
 The lrelease command line tool produces QM files out of TS files. The QM file format is a compact binary format that is used by the localized application. It provides extremely fast lookups for translations. The TS files lrelease processes can be specified at the command line, or given indirectly by a Qt .pro project file.
