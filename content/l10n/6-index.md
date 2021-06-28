@@ -9,14 +9,44 @@ loctool have plugin for android localization. `ilib-loctool-android-resource` an
 
 1) Extract localizable Strings
 ====
+A string resource provides text strings for your application with optional text styling and formatting. 
+There are three types of resources that can provide your application with strings:
+* String resource
+  * String
+  * String Array
+  * Quantity Strings (Plurals)
+* Layout resource
 
+a) [String](https://developer.android.com/guide/topics/resources/string-resource#String)
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello_world">Hello World!</string>
 </resources>
 ```
+b) [String-array](https://developer.android.com/guide/topics/resources/string-resource#StringArray)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="string_array_name">
+        <item>text_string</item>
+    </string-array>
+</resources>
+```
 
+c) [Quantity strings](https://developer.android.com/guide/topics/resources/string-resource#Plurals) (plurals)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plural_name">
+        <item
+            quantity=["zero" | "one" | "two" | "few" | "many" | "other"]
+            >text_string</item>
+    </plurals>
+</resources>
+```
+
+d) [Layout resource](https://developer.android.com/guide/topics/resources/layout-resource)
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
@@ -61,4 +91,6 @@ Spanish strings (es locale), /values-es/strings.xml:
 
 Reference
 ====
+* https://developer.android.com/guide/topics/resources/string-resource
+* https://developer.android.com/guide/topics/resources/layout-resource
 * https://developer.android.com/guide/topics/resources/localization
