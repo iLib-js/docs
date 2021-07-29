@@ -6,9 +6,12 @@ metaDescription: "About US"
 
 
 # Contact US
+* [Edwin Hoogerbeets](https://github.com/ehoogerbeets)
 * [Goun Lee](https://github.com/gouniLee)
 
 #### Bug Reports
+* Report to iLib  🠆 [here]((https://github.com/iLib-js/iLib/issues)).
+* Report to loctool  🠆 [here](https://github.com/iLib-js/loctool/issues).
 
 # Use Cases
 * webOS Platform for LG Eletronics.
