@@ -1,7 +1,7 @@
 ---
 title: "loctool Setup"
-metaTitle: "Setup page"
-metaDescription: "Setup page"
+metaTitle: "loctool Setup"
+metaDescription: "loctool Setup"
 ---
 
 Installation

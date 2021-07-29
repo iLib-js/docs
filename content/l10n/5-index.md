@@ -1,7 +1,7 @@
 ---
 title: "loctool for QML devs"
-metaTitle: "Process page"
-metaDescription: "Process page"
+metaTitle: "loctool QML"
+metaDescription: "loctool QML"
 ---
 
 loctool have plugin for QML app's localization. `ilib-loctool-webos-qml` and `iilb-loctool-webos-ts-resource`

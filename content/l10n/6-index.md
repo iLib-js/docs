@@ -1,13 +1,13 @@
 ---
 title: "loctool for Android devs"
-metaTitle: "Process page"
-metaDescription: "Process page"
+metaTitle: "loctool Android"
+metaDescription: "loctool Android"
 ---
 
 loctool have plugin for android localization. `ilib-loctool-android-resource` and `iilb-loctool-android-layout`. loctool handles text string resources.  
 `ilib-loctool-android-resource` is for strings.xml file under `res/values`, `ilib-loctool-android-layout` plugin handles text in layout file under `res/layout`
 
-1) Extract localizable Strings
+1) Write code - Extract localizable Strings
 ====
 A string resource provides text strings for your application with optional text styling and formatting. 
 There are three types of resources that can provide your application with strings:

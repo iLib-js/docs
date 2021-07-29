@@ -1,7 +1,7 @@
 ---
 title: "loctool for JavaScript devs"
-metaTitle: "Process page"
-metaDescription: "Process page"
+metaTitle: "loctool JavaScript"
+metaDescription: "loctool JavaScript"
 ---
 
 loctool have plugin for web app's localization. `ilib-loctool-javascript` and `iilb-loctool-javascript-resource`

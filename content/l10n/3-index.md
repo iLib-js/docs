@@ -1,7 +1,7 @@
 ---
 title: "loctool plugins"
-metaTitle: "Process page"
-metaDescription: "Process page"
+metaTitle: "loctool plugin"
+metaDescription: "loctool plugin"
 ---
 
 Plugins
