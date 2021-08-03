@@ -17,4 +17,5 @@ webOS I18N and L10N
 Basically, webOS adopts great opensource project and support features. which is [__iLib__ ](https://github.com/iLib-js/iLib )and [__lotool__](https://github.com/iLib-js/loctool).  
 If you want to see indetail, Please visith the [webOS OSE localization guide page](https://www.webosose.org/docs/guides/development/localization/localization-guide/).
 
+* [webOS Internal Locale Reference Site](http://i18n.lge.com/ilib/localeSpecDoc/reference/)
 
