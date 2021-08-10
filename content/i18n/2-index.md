@@ -4,6 +4,7 @@ metaTitle: "Handling Strings page"
 metaDescription: "Handling Strings Service page"
 ---
 
+![image](../images/hellostring.jpg)
 
 ### String Translation
 All translable strings should be wrapped in a [getString](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ResBundle.html#getString) call. 

@@ -6,7 +6,7 @@ metaDescription: "Integration page"
 
 ### iLib
 
-[iLib](https://github.com/iLib-js/iLib) is an internationalization library written in pure ES5 Javascript.
+[iLib](https://github.com/iLib-js/iLib) is an **internationalization library** written in pure ES5 Javascript.
 It does not require any other libraries to function, and can run equally well in various older and newer browsers,  
 on various OS's (including mobile), nodejs, webOS, Qt/QML, RingoJS, React/Enact, or rhino/nashorn.
 

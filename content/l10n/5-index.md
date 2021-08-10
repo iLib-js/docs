@@ -12,6 +12,17 @@ It's implemented for webOS QML application, but it could be used for general QML
 `ilib-loctool-webos-qml` plugin takes `qml` and `js` type files and extract localizable strings.  
 If you use the following methods and macros, the text inside it will be extracted as a localizable string.
 
+
+```
+Text { text: qsTr("hello") }
+Text { text: qsTranslate("CustomContext", "hello") }
+
+Item {
+    property string greeting: QT_TR_NOOP("hello")
+
+    Text { text: qsTr(greeting) }
+}
+```
 Qt QML Type - Methods
 ---
 | Method  | Description  |
