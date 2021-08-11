@@ -1,96 +1,109 @@
 ---
-title: "loctool for Android devs"
-metaTitle: "loctool Android"
-metaDescription: "loctool Android"
+title: "loctool for QML devs"
+metaTitle: "loctool QML"
+metaDescription: "loctool QML"
 ---
 
-loctool have plugin for android localization. `ilib-loctool-android-resource` and `iilb-loctool-android-layout`. loctool handles text string resources.  
-`ilib-loctool-android-resource` is for strings.xml file under `res/values`, `ilib-loctool-android-layout` plugin handles text in layout file under `res/layout`
+loctool have plugin for QML app's localization. `ilib-loctool-webos-qml` and `iilb-loctool-webos-ts-resource`
+It's implemented for webOS QML application, but it could be used for general QML application too.
 
-1) Write code - Extract localizable Strings
+1) Extract localizable Strings
 ====
-A string resource provides text strings for your application with optional text styling and formatting. 
-There are three types of resources that can provide your application with strings:
-* String resource
-  * String
-  * String Array
-  * Quantity Strings (Plurals)
-* Layout resource
+| Input file type | Output file type |
+|:---------------:|------------------|
+|     qml, js     |        js        |
 
-a) [String](https://developer.android.com/guide/topics/resources/string-resource#String)
-``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="hello_world">Hello World!</string>
-</resources>
-```
-b) [String-array](https://developer.android.com/guide/topics/resources/string-resource#StringArray)
-``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="string_array_name">
-        <item>text_string</item>
-    </string-array>
-</resources>
-```
+`ilib-loctool-webos-qml` plugin takes `qml` and `js` type files and extract localizable strings.  
+If you use the following methods and macros, the text inside it will be extracted as a localizable string.
 
-c) [Quantity strings](https://developer.android.com/guide/topics/resources/string-resource#Plurals) (plurals)
-``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <plurals name="plural_name">
-        <item
-            quantity=["zero" | "one" | "two" | "few" | "many" | "other"]
-            >text_string</item>
-    </plurals>
-</resources>
-```
 
-d) [Layout resource](https://developer.android.com/guide/topics/resources/layout-resource)
-``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
-  <RelativeLayout android:layout_width="match_parent">
-    <com.mycompany.customviews.RobotoRegularTextView
-      android:id="@+id/invalidpasswordMsg"
-      android:text="This is a test"
-      android:textColor="@color/error_red"/>
-  </RelativeLayout>
-</FrameLayout>
 ```
+Text { text: qsTr("hello") }
+Text { text: qsTranslate("CustomContext", "hello") }
+
+Item {
+    property string greeting: QT_TR_NOOP("hello")
+
+    Text { text: qsTr(greeting) }
+}
+```
+Qt QML Type - Methods
+---
+| Method  | Description  |
+|---|---|
+| [qsTr](https://doc.qt.io/qt-6/qml-qtqml-qt.html#qsTr-method) |Returns a translated string identified by id. If no matching string is found, the id itself is returned.|
+| [qsTrIdNoOp](https://doc.qt.io/qt-6/qml-qtqml-qt.html#qsTrIdNoOp-method) |Marks sourceText for dynamic translation; |
+| [qsTranslate](https://doc.qt.io/qt-6/qml-qtqml-qt.html#qsTranslate-method) |Returns a translated version of sourceText within the given context |
+| [qsTranslateNoOp](https://doc.qt.io/qt-6/qml-qtqml-qt.html#qsTranslateNoOp-method) |Marks sourceText for dynamic translation in the given context |
+
+
+Global Qt Declarations - Macros
+---
+
+| Method  | Description  |
+|---|---|
+| [QT_TR_NOOP](https://doc.qt.io/qt-6/qtglobal.html#QT_TR_NOOP) |Marks the UTF-8 encoded string literal sourceText for delayed translation in the current context.|
+| [QT_TR_N_NOOP](https://doc.qt.io/qt-6/qtglobal.html#QT_TR_N_NOOP) |Marks the UTF-8 encoded string literal sourceText for numerator dependent delayed translation in the current context.|
+| [QT_TRANSLATE_NOOP](https://doc.qt.io/qt-6/qtglobal.html#QT_TRANSLATE_NOOP) |Marks the UTF-8 encoded string literal sourceText for delayed translation in the given context. |
+| [QT_TRANSLATE_N_NOOP3](https://doc.qt.io/qt-6/qtglobal.html#QT_TRANSLATE_N_NOOP3) |Marks the UTF-8 encoded string literal sourceText for numerator dependent delayed translation in the given context with the given comment.|
+| [QT_TRANSLATE_N_NOOP](https://doc.qt.io/qt-6/qtglobal.html#QT_TRANSLATE_N_NOOP) |Marks the UTF-8 encoded string literal sourceText for numerator dependent delayed translation in the given context. |
+
 
 2) Write config file for loctool
 ====
-Make sure `resourceDirs`, `resourceFileType` and `plugin` are written correctly in `project.json` file.  
+Make sure `resourceDirs`, `resourceFileType` and `plugin` are written correctly in `project.json` file.
 
-i.e)
-```
+i.e) project.json
+
+```json
 ...
 "resourceDirs": {
-        "java":"res"
+    "ts":"resources"
 },
 "resourceFileTypes": {
-    "java":"ilib-loctool-android-resource"
+    "ts":"ilib-loctool-webos-ts-resource"
 },
 "plugins": [
-    "ilib-loctool-android-resource",
-    "ilib-loctool-android-layout"
+    "ilib-loctool-webos-qml",
+    "ilib-loctool-webos-appinfo-json"
 ],
 ...
 ```
-3) Run the loctool - Generate localization data 
-loctool creates a new folder under `res` with name of `values-local` which follows androld localization rules.
 
-i.e)
-Spanish strings (es locale), /values-es/strings.xml:
+3) Run the loctool - Generate localization data (*.ts file)
+====
+`ilib-loctool-webos-ts` plugin localization data as [TS file format](https://doc.qt.io/qt-5/linguist-ts-file-format.html).
+TS file format used by QT Linguist.  
+Here's simple ts file form.
 ```
-<resources>
-    <string name="hello_world">¡Hola Mundo!</string>
-</resources>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ko-KR" sourcelanguage="en-KR">
+  <context>
+    <name>LocalizationToolTest</name>
+    <message>
+      <location filename="LocalizationToolTest.qml"></location>
+      <source>Hello</source>
+      <translation>안녕하세요</translation>
+    </message>
+  </context>
+</TS>
+```
+
+
+4) Generate QML file format (*.qm file)
+====
+With ts files from loctool running, Developer need to run [lrelease](https://doc.qt.io/qt-5/linguist-manager.html#using-lrelease) to get QML file format. It's compact binary format that is used by the localized application.
+The lrelease command line tool produces QM files out of TS files. The QM file format is a compact binary format that is used by the localized application. It provides extremely fast lookups for translations. The TS files lrelease processes can be specified at the command line, or given indirectly by a Qt .pro project file.
+
+lrelease can be also be run without specifying a .pro file:
+```
+lrelease.exe main_en.ts languages\main_fr.ts
 ```
 
 Reference
 ====
-* https://developer.android.com/guide/topics/resources/string-resource
-* https://developer.android.com/guide/topics/resources/layout-resource
-* https://developer.android.com/guide/topics/resources/localization
+* https://doc.qt.io/qt-6/qml-qtqml-qt.html
+* https://doc.qt.io/qt-6/qtglobal.html
+* https://doc.qt.io/qt-5/linguist-manager.html
+

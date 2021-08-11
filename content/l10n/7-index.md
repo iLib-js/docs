@@ -1,77 +1,101 @@
 ---
-title: "loctool for Markdown devs"
-metaTitle: "loctool Markdown"
-metaDescription: "loctool Markdown"
+title: "loctool for Android devs"
+metaTitle: "loctool Android"
+metaDescription: "loctool Android"
 ---
 
-loctool have a `ilib-loctool-ghfm` plugin for github-flavored markdown file localization.
-loctool reads the markdown file, extracts the translatable parts into a file, and creates a file to pass to the translator.
-Then use the xliff file with the translations to generate a localized md file.
+loctool have plugin for android localization. `ilib-loctool-android-resource` and `iilb-loctool-android-layout`. loctool handles text string resources.  
+`ilib-loctool-android-resource` is for strings.xml file under `res/values`, `ilib-loctool-android-layout` plugin handles text in layout file under `res/layout`
 
-1) Write code - Extract localizable Strings  
+1) Extract localizable Strings
 ====
-Normal Markdown is broken into paragraphs and phrases using the [remark](https://www.npmjs.com/package/remark) family of parsers.  
+| Input file type | Output file type |
+|:---------------:|------------------|
+|       xml       |        xml       |
 
+A string resource provides text strings for your application with optional text styling and formatting. 
+There are three types of resources that can provide your application with strings:
+* String resource
+  * String
+  * String Array
+  * Quantity Strings (Plurals)
+* Layout resource
 
+a) [String](https://developer.android.com/guide/topics/resources/string-resource#String)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_world">Hello World!</string>
+</resources>
+```
+b) [String-array](https://developer.android.com/guide/topics/resources/string-resource#StringArray)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="string_array_name">
+        <item>text_string</item>
+    </string-array>
+</resources>
+```
 
-Things to know
-==
+c) [Quantity strings](https://developer.android.com/guide/topics/resources/string-resource#Plurals) (plurals)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plural_name">
+        <item
+            quantity=["zero" | "one" | "two" | "few" | "many" | "other"]
+            >text_string</item>
+    </plurals>
+</resources>
+```
 
-* Whenever there is syntax in the markdown that translators should not touch, this plugin converts them into xml-like components.  
-
-    `This is _bold_ and *italic* text.`  ⟶   
-    `This is <c0>bold</c0> and <c1>italic</c1> text.`   
-
-
-* Snippets of code are not processed.   
-    ``There are many instances of `numcount` used in the code.``  ⟶   
-    `There are many instances of <c0/> used in the code.`
-
-
-* Embed HTML in the markdown and it will be processed as above using the XML-like components.   
-
-    `This text is <b>bold</b> and contains a <span font="foo">different font</span>.`  
-    ⟶   
-    `This text is <c0>bold</c0> and contains a <c1>different font</c1>.`
-
+d) [Layout resource](https://developer.android.com/guide/topics/resources/layout-resource)
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+  <RelativeLayout android:layout_width="match_parent">
+    <com.mycompany.customviews.RobotoRegularTextView
+      android:id="@+id/invalidpasswordMsg"
+      android:text="This is a test"
+      android:textColor="@color/error_red"/>
+  </RelativeLayout>
+</FrameLayout>
+```
 
 2) Write config file for loctool
 ====
-Make sure `plugin` are written correctly in `project.json` file.  
+Make sure `resourceDirs`, `resourceFileType` and `plugin` are written correctly in config file.  
+
+i.e) project.json
+
+```json
+...
+"resourceDirs": {
+    "java":"res"
+},
+"resourceFileTypes": {
+    "java":"ilib-loctool-android-resource"
+},
+"plugins": [
+    "ilib-loctool-android-resource",
+    "ilib-loctool-android-layout"
+],
+...
+```
+3) Run the loctool - Generate localization data 
+loctool creates a new folder under `res` with name of `values-local` which follows androld localization rules.
 
 i.e)
+Spanish strings (es locale), /values-es/strings.xml:
 ```
-...
-"plugins": [
-    "ilib-loctool-ghfm
-],
-"settings": {
-    ....
-    "markdown": {
-        "mappings": {
-            "**/en-US/*.md": {
-                "template": "locale/[locale]/[filename]",
-                "frontmatter": ["Title", "Description"]
-            }
-        }
-    }
-}
+<resources>
+    <string name="hello_world">¡Hola Mundo!</string>
+</resources>
 ```
-This plugin now supports **mappings**:  
-> The mappings allow you to match a particular path name and apply particular settings to that path, 
-such as an output path name template.  
-The template follows the syntax for path name templates defined in the the loctool itself.
 
-> The frontmatter setting specifies an array of strings that represent the names of the fields 
- in the frontmatter that should be localized.  
- The frontmatter is parsed as a yaml file using the ilib-loctool-yaml plugin.
-
-> Any fields not listed in the frontmatter list will be preserved but not be localized.  
-If frontmatter is set to "true" instead of an array, all fields will be localized. 
-If frontmatter is set to "false", or if it is not given, then no fields will be localized.  
-
-
-3) Run the loctool - Generate localization data 
+Reference
 ====
-There is a sample application to see md file localization. Visit here. ➡ [link](https://github.com/iLib-js/ilib-loctool-samples/tree/main/markdown)  
- If you run loctool according to the configuration above, the output will be generated under the `locale` directory.  
+* https://developer.android.com/guide/topics/resources/string-resource
+* https://developer.android.com/guide/topics/resources/layout-resource
+* https://developer.android.com/guide/topics/resources/localization

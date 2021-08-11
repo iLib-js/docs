@@ -94,7 +94,17 @@ var result = fmt.format({
 
 #### Calendar Conversion
 iLib supports dates in multiple calendaring systems:  
- `Coptic`,`Ethiopic`, `Gregorian`, `Han`, `Hebrew`, `Islamic`, `Julian`, `Persian`, `PersianAlgo`, `ThaiSolar`
+ * Coptic
+ * Ethiopic
+ * Gregorian
+ * Han
+ * Hebrew
+ * Islamic
+ * Julian
+ * Persian
+ * PersianAlgo
+ * ThaiSolar`
+ 
 Default is the familiar Gregorian calendar  
 Create dates using the factory method or using the calendar dates directly:
 ```javascript
