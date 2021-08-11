@@ -9,9 +9,9 @@ loctool have plugin for android localization. `ilib-loctool-android-resource` an
 
 1) Extract localizable Strings
 ====
-| Input file type | Output file type |
-|:---------------:|------------------|
-|       xml       |        xml       |
+| Input file type | Output file type | Sample |
+|:---------------:|------------------|--------|
+|        md       |        md        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
 
 A string resource provides text strings for your application with optional text styling and formatting. 
 There are three types of resources that can provide your application with strings:

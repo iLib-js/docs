@@ -10,9 +10,9 @@ Then use the xliff file with the translations to generate a localized md file.
 
 1) Extract localizable Strings  
 ====
-| Input file type | Output file type |
-|:---------------:|------------------|
-|        md       |        md        |
+| Input file type | Output file type | Sample |
+|:---------------:|------------------|--------|
+|        md       |        md        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
 Normal Markdown is broken into paragraphs and phrases using the [remark](https://www.npmjs.com/package/remark) family of parsers.  
 
 

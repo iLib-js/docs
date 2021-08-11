@@ -9,9 +9,9 @@ It's implemented for webOS QML application, but it could be used for general QML
 
 1) Extract localizable Strings
 ====
-| Input file type | Output file type |
-|:---------------:|------------------|
-|     qml, js     |        js        |
+| Input file type | Output file type | Sample |
+|:---------------:|------------------|--------|
+|     qml, js     |        js        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
 
 `ilib-loctool-webos-qml` plugin takes `qml` and `js` type files and extract localizable strings.  
 If you use the following methods and macros, the text inside it will be extracted as a localizable string.
