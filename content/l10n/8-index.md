@@ -4,15 +4,16 @@ metaTitle: "loctool Markdown"
 metaDescription: "loctool Markdown"
 ---
 
-loctool have a `ilib-loctool-ghfm` plugin for github-flavored markdown file localization.
-loctool reads the markdown file, extracts the translatable parts into a file, and creates a file to pass to the translator.
-Then use the xliff file with the translations to generate a localized md file.
+loctool have a **[ilib-loctool-ghfm](https://github.com/iLib-js/ilib-loctool-ghfm)** plugin for github-flavored markdown file localization.   
+loctool reads the markdown file, extracts the translatable parts into a file, and creates a file to pass to the translator. Then use the xliff file with the translations to generate a localized md file.
 
-1) Extract localizable Strings  
-====
 | Input file type | Output file type | Sample |
 |:---------------:|------------------|--------|
 |        md       |        md        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
+
+1) Extract localizable Strings  
+====
+
 Normal Markdown is broken into paragraphs and phrases using the [remark](https://www.npmjs.com/package/remark) family of parsers.  
 
 

@@ -4,15 +4,15 @@ metaTitle: "loctool JavaScript"
 metaDescription: "loctool JavaScript"
 ---
 
-
-1) Extract localizable Strings
-====
+**[ilib-loctool-javascript](https://github.com/iLib-js/ilib-loctool-javascript)** and **[ilib-loctool-javascript-resource](https://github.com/iLib-js/ilib-loctool-javascript-resource)**  are a plugin for the loctool that allows it to read and localize javascript files.  
 
 |        Input file type        | Output file type | Sample |
 |:-----------------------------:|------------------|--------|
 | js, jsx, html.haml, tmpl.html |        js        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
 
 
+1) Extract localizable Strings
+====
 * `ilib-loctool-javascript` plugin takes specific type files  and extract localizable strings by the syntax below.  
 * `ilib-loctool-javascript-resource` plugin generate localization data.
 

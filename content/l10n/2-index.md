@@ -35,7 +35,7 @@ loctool supports both versions. The default value is XLIFF 1.2
 In order to read/write XLIFF 2.0 format, Add option `-2` to specify the version while running loctool
 
 
-Reference
+Appendix
 ====
 * [XLIFF 2.0 Specification](http://docs.oasis-open.org/xliff/xliff-core/v2.0/xliff-core-v2.0.html)
 * [XLIFF 1.2 Specification](http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html)

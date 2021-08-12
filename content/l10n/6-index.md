@@ -4,14 +4,16 @@ metaTitle: "loctool QML"
 metaDescription: "loctool QML"
 ---
 
-loctool have plugin for QML app's localization. `ilib-loctool-webos-qml` and `iilb-loctool-webos-ts-resource`
+loctool have plugin for QML app's localization. **[ilib-loctool-webos-qml](https://github.com/iLib-js/ilib-loctool-webos-qml)** and **[ilb-loctool-webos-ts-resource](https://github.com/iLib-js/ilib-loctool-webos-ts-resource)**`
 It's implemented for webOS QML application, but it could be used for general QML application too.
 
-1) Extract localizable Strings
-====
 | Input file type | Output file type | Sample |
 |:---------------:|------------------|--------|
 |     qml, js     |        js        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
+
+
+1) Extract localizable Strings
+====
 
 `ilib-loctool-webos-qml` plugin takes `qml` and `js` type files and extract localizable strings.  
 If you use the following methods and macros, the text inside it will be extracted as a localizable string.
