@@ -4,8 +4,8 @@
  */
 
 /*!
- * github-buttons v2.14.4
- * (c) 2021 なつき
+ * github-buttons v2.8.0
+ * (c) 2020 なつき
  * @license BSD-2-Clause
  */
 
