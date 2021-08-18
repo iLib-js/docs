@@ -4,7 +4,7 @@ metaTitle: "loctool QML"
 metaDescription: "loctool QML"
 ---
 
-loctool have plugin for QML app's localization. **[ilib-loctool-webos-qml](https://github.com/iLib-js/ilib-loctool-webos-qml)** and **[ilb-loctool-webos-ts-resource](https://github.com/iLib-js/ilib-loctool-webos-ts-resource)**`
+loctool have plugin for QML app's localization. **[ilib-loctool-webos-qml](https://github.com/iLib-js/ilib-loctool-webos-qml)** and **[ilb-loctool-webos-ts-resource](https://github.com/iLib-js/ilib-loctool-webos-ts-resource)**
 It's implemented for webOS QML application, but it could be used for general QML application too.
 
 | Input file type | Output file type | Sample |

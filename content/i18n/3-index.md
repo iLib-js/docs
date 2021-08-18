@@ -21,7 +21,9 @@ Date and time formatting is done through the [DateFmt](https://ilib-js.github.io
 controlling how the formatter behaves Call the [format()](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateFmt.html#format) method of the formatter as many times as you want to format dates with those options
 
 ```javascript
+var DateFactory=require("<path-to-ilib>/lib/DateFactory");
 var DateFmt = require("<path-to-ilib>/lib/DateFmt.js")
+var date=DateFactory({year:2021, month:3, day:4, hour:14, minute:19});
 
 var fmt = new DateFmt();
 var d = fmt.format(date);
@@ -53,7 +55,8 @@ var d = fmt.format(date);
 ### Date-related Formatting
 
 #### Date RangeRange
-Date/time ranges are periods of time with a specific start and end points Can be formatted using the [DateRngFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateRngFmt.html) class
+Date/time ranges are periods of time with a specific start and end points 
+It Can be formatted using the [DateRngFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateRngFmt.html) class
 Example output: "Mar 11-14, 2013"
 
 ``` javascript
@@ -69,7 +72,8 @@ var d = fmt.format(start, end);
 ```
 #### Duration
 
-Durations are a measure of how long something took to happen Can be formatted using the [DurFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DurationFmt.html) class
+Durations are a measure of how long something took to happen 
+It Can be formatted using the [DurFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DurationFmt.html) class
 Example output: "36 hours, 24 minutes, and 37 seconds"
 
 ``` javascript
@@ -103,7 +107,7 @@ iLib supports dates in multiple calendaring systems:
  * Julian
  * Persian
  * PersianAlgo
- * ThaiSolar`
+ * ThaiSolar
  
 Default is the familiar Gregorian calendar  
 Create dates using the factory method or using the calendar dates directly:
@@ -111,7 +115,7 @@ Create dates using the factory method or using the calendar dates directly:
 var HebrewDate = require("<path-to-ilib>/lib/HebrewDate.js")
 var now = new HebrewDate();
 
-// This is This is equivalent to the factory method:
+// This is equivalent to the factory method:
 var DateFactory = require("<path-to-ilib>/lib/DateFactory.js")
 var now = DateFactory({type: "hebrew"});
 ```
@@ -225,7 +229,7 @@ uf.format(m1)
 ```javascript
 var m1 = MeasurementFactory({unit: "hectare", amount: 100});
          
-var uf = new UnitFmt({locale:"en-US",autoScale:true, autoConvert:false});
+var uf = new UnitFmt({locale:"en-US", autoScale:true, autoConvert:false});
 var str = uf.format(m1);
 // 1 square kilometer
 ```

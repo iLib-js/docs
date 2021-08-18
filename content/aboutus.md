@@ -10,7 +10,7 @@ metaDescription: "About US"
 * [Goun Lee](https://github.com/gouniLee)
 
 #### Bug Reports
-* Report to iLib  🠆 [here]((https://github.com/iLib-js/iLib/issues)).
+* Report to iLib  🠆 [here](https://github.com/iLib-js/iLib/issues).
 * Report to loctool  🠆 [here](https://github.com/iLib-js/loctool/issues).
 
 # Use Cases

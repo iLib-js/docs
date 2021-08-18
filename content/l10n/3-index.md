@@ -30,4 +30,4 @@ Please refer to ilib-loctool's [plugin information](6-index).
 2. Run the loctool to produce a set of xliff files with new strings to translate in them
 3. Send the xliff files to your translators for translation and, some time later, receive the translations back
 4. Make the translations available into your project
-5. Run the loctool again to produce a set of translated files and a set of new xliff files. The new xliff files contain all the new or changed strings since the last time that the loctool was ru
+5. Run the loctool again to produce a set of translated files and a set of new xliff files. The new xliff files contain all the new or changed strings since the last time that the loctool was run.

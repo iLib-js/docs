@@ -40,16 +40,16 @@ Each app contains a `resources` directory.
 Under the resources dir are directories named for the locales.  
 iLib reads the translations from multiple `strings.json` files under the locale directories.  
 Layered: lower levels override strings in the upper levels  
-eg. `resources/sr/Latn/RS/strings.json` overrides strings in `resources/sr/Latn/strings.json`, which override `resources/sr/strings.json`, which overrides the English source string  
+eg. `resources/zh/Hans/CN/strings.json` overrides strings in `resources/sr/Hans/strings.json`, which override `resources/zh/strings.json`, which overrides the English source string  
 Resources Dir Layout:
 ```
 resources/
-   en/
-      strings.json - shared strings for all English
-      CA/
-         strings.json - only strings special to Canada
-      GB/
-         strings.json - only strings special to Great Britain
+   zh/
+      strings.json - shared strings for all chinese
+      Hans/
+         strings.json - only strings special to simplified chinese
+         CN/
+            strings.json - only strings special to China
 ```
 You do not have to create this structure yourself. The localization tool will do this for you.
 

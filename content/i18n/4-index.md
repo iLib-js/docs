@@ -48,7 +48,7 @@ Thigs that the Script information instance can tell you:
 * The 4-letter ISO 15924 identifier 
 * The ISO 15924 code number
 * The name of this script in English
-* the usual direction that text in this script is written in
+* The usual direction that text in this script is written in
 * and more
 
 ```javascript
@@ -69,7 +69,7 @@ A information about a Currency is available via the [Currency](https://ilib-js.g
 Thigs that the Currency information instance can tell you:  
 * The ISO 4217 currency code
 * The locale for this currency
-* the name of the currency in English
+* The name of the currency in English
 * The sign commonly used to represent this currency.
 * and more
 

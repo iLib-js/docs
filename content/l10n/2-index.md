@@ -8,7 +8,7 @@ Xliff
 ====
 
 **[XLIFF](https://en.wikipedia.org/wiki/XLIFF)** (XML Localization Interchange File Format) is an XML-based bitext format created to standardize the way localizable data are passed between and among tools during a localization process and a common format for CAT tool exchange. 
-the first fully ratified version of XLIFF appeared as XLIFF Version 1.2 in _February 2008_. Its current specification is v2.1 released on _2018-02-13_, which is backward compatible with v2.0 released on _2014-08-05_.
+The first fully ratified version of XLIFF appeared as XLIFF Version 1.2 in _February 2008_. Its current specification is v2.1 released on _2018-02-13_, which is backward compatible with v2.0 released on _2014-08-05_.
 
 The specification is aimed at the localization industry. It specifies elements and attributes to store content extracted from various original file formats and its corresponding translation. The goal was to abstract the localization skills from the engineering skills related to specific formats such as HTML.
 
