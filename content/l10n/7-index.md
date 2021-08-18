@@ -10,7 +10,7 @@ loctool have plugin for android localization. **[ilib-loctool-android-resource](
 
 | Input file type | Output file type | Sample |
 |:---------------:|------------------|--------|
-|        md       |        md        |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
+|       xml       |        xml       |  [here](https://github.com/iLib-js/ilib-loctool-samples)  |
 
 1) Extract localizable Strings
 ====
