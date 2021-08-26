@@ -39,7 +39,25 @@ Things to know
     `This text is <c0>bold</c0> and contains a <c1>different font</c1>.`
 
 
-2) Write config file for loctool
+2) Prepre XLIFF files
+====
+Prepare multi-language XLIFF files with translation.   
+With loctool parameter or config files, It can set xliff files location
+
+```
+
+// a) loctool option
+ -x or --xliffs
+  Specify the dir where the xliffs files live. Default: "."
+
+// b) set in project.json config file
+...
+"settings": {
+    "xliffsDir": "./xliffs",
+... 
+```
+
+3) Write config file for loctool
 ====
 Make sure `plugin` are written correctly in config file.  
 
@@ -76,7 +94,7 @@ If frontmatter is set to "true" instead of an array, all fields will be localize
 If frontmatter is set to "false", or if it is not given, then no fields will be localized.  
 
 
-3) Run the loctool - Generate localization data 
+4) Run the loctool - Generate localization data 
 ====
 There is a sample application to see md file localization. Visit here. ➡ [link](https://github.com/iLib-js/ilib-loctool-samples/tree/main/markdown)  
  If you run loctool according to the configuration above, the output will be generated under the `locale` directory.  

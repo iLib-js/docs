@@ -65,7 +65,25 @@ d) [Layout resource](https://developer.android.com/guide/topics/resources/layout
 </FrameLayout>
 ```
 
-2) Write config file for loctool
+2) Prepre XLIFF files
+====
+Prepare multi-language XLIFF files with translation.   
+With loctool parameter or config files, It can set xliff files location
+
+```
+
+// a) loctool option
+ -x or --xliffs
+  Specify the dir where the xliffs files live. Default: "."
+
+// b) set in project.json config file
+...
+"settings": {
+    "xliffsDir": "./xliffs",
+... 
+```
+
+3) Write config file for loctool
 ====
 Make sure `resourceDirs`, `resourceFileType` and `plugin` are written correctly in config file.  
 
@@ -85,7 +103,9 @@ i.e) project.json
 ],
 ...
 ```
-3) Run the loctool - Generate localization data 
+
+4) Run the loctool - Generate localization data 
+====
 loctool creates a new folder under `res` with name of `values-local` which follows androld localization rules.
 
 i.e)

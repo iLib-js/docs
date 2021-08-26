@@ -29,7 +29,25 @@ msgid "There is {n} object."
 msgstr_plural "There are {n} objects."
 ```
 
-2) Write config file for loctool
+2) Prepre XLIFF files
+====
+Prepare multi-language XLIFF files with translation.   
+With loctool parameter or config files, It can set xliff files location
+
+```javascript
+
+// a) loctool option
+ -x or --xliffs
+  Specify the dir where the xliffs files live. Default: "."
+
+// b) set in project.json config file
+...
+"settings": {
+    "xliffsDir": "./xliffs",
+...
+```
+
+3) Write config file for loctool
 ====
 
 Make sure `plugin` and `po` property are written correctly in config file.  
@@ -52,7 +70,7 @@ i.e) project.json
 }
 ```    
 
-3) Run the loctool - Generate localization data 
+4) Run the loctool - Generate localization data 
 ====
 loctool creates a new folder under `resource` with name of `[locale].po` 
 
@@ -63,8 +81,6 @@ Korean strings resource-es/ko-KR.po:
 msgid "Hello"
 msgstr "안녕하세요"
 ```
-
-
 
 Appendix
 ====

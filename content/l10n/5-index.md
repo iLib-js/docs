@@ -22,8 +22,28 @@ RB.getString("This is a test with a unique id", "id1");
 RB.getStringJS('Smart Watches');
 ```
 
-2) Write config file for loctool
+2) Prepre XLIFF files
 ====
+Prepare multi-language XLIFF files with translation.   
+With loctool parameter or config files, It can set xliff files location
+
+```
+
+// a) loctool option
+ -x or --xliffs
+  Specify the dir where the xliffs files live. Default: "."
+
+// b) set in project.json config file
+...
+"settings": {
+    "xliffsDir": "./xliffs",
+...    
+
+```
+3) Write config file for loctool
+====
+Make sure `resourceDirs`, `resourceFileType` and `plugin` are written correctly in `project.json` file.
+
 i.e) project.json
 
 ```json
@@ -40,10 +60,12 @@ i.e) project.json
 ...
 ```
 
-3) Run the loctool - Generate localization data 
+
+4) Run the loctool - Generate localization data 
 ====
 
-loctool creates a new folder under `resources` with name of `[locale].js` 
+loctool creates a new folder under `resources` with name of `[locale].js` .
+
 
 i.e) ko-KR.js 
 ```javascript
