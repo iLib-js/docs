@@ -22,11 +22,17 @@ controlling how the formatter behaves Call the [format()](https://ilib-js.github
 
 ```javascript
 var DateFactory = require("<path-to-ilib>/lib/DateFactory");
-var date = new Date();
+var date = new Date(2021, 7, 20);
 
 var fmt = new DateFmt({locale:"ko-KR", length:"full"});
 fmt.format(date);
+// 2021년 8월 20일
 
+var fmt = new DateFmt({locale:"en-US", length:"full"});
+// August 19, 2021
+
+var fmt = new DateFmt({locale:"en-GB", length:"full"});
+// 19 August 2021
 ```
 
 #### Date/Time Formatting Options
@@ -34,8 +40,8 @@ There are options to control:
 If you see more in detail, Please visit the [link](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateFmt.html).
 * locale: Which locale to use
 * type: Format the date only, time only, or both the date and time together
-* clock: Use the 12- or 24-hour clock, or use the default for the locale
-* length: Use short-, medium-, long-, or full-length text for components that use words.
+* clock: Use the 12 or 24 hour clock, or use the default for the locale
+* length: Use short, medium, long, or full length text for components that use words.
 * and more
 
 ```javascript
@@ -55,12 +61,13 @@ var result = fmt.format(date);
 
 var fmt = new DateFmt({
    locale: "ko-KR",
-   type: "datetime",
-   length: "full",
+   date: "dmwy",
+   length: "short",
    timezone: "local"
 });
+
 var result = fmt.format(date);
-// 2021년 8월 22일 오후 3:22
+// 21. 8. 22. 일
 ```
 
 ### Date-related Formatting

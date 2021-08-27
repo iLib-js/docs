@@ -42,7 +42,7 @@ Things to know
 2) Prepre XLIFF files
 ====
 Prepare multi-language XLIFF files with translation.   
-With loctool parameter or config files, It can set xliff files location
+With loctool parameter or through a config file, It can set xliff files location.
 
 ```
 

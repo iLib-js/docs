@@ -1,7 +1,7 @@
 ---
-title: "loctool plugins"
-metaTitle: "loctool plugin"
-metaDescription: "loctool plugin"
+title: "loctool Plugins"
+metaTitle: "loctool Plugin"
+metaDescription: "loctool Plugin"
 ---
 
 Plugins
