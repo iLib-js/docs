@@ -12,21 +12,28 @@ var LocaleInfo = require("<path-to-ilib>/lib/LocaleInfo.js");
 var li = new LocaleInfo({locale: "ru-RU"});
 
 li.getScript()
-//'Cyrl'
+// Cyrl
+
 li.getClock()
-//'24'
+// 24
+
 li.getCurrency()
-//'RUB'
+// RUB
+
 li.getFirstDayOfWeek()
-//1
+// 1 (Monday)
+
 li.getMeridiemsStyle()
-//'gregorian'
+// gregorian
+
 li.getPaperSize()
-//'A4'
+// A4
+
 li.getTimeZone()
-//'Europe/Moscow'
+// Europe/Moscow
+
 li.getUnits()
-//'metric'
+// metric
 
 ```
 Things that the locale information instance can tell you:
@@ -48,7 +55,7 @@ Thigs that the Script information instance can tell you:
 * The 4-letter ISO 15924 identifier 
 * The ISO 15924 code number
 * The name of this script in English
-* the usual direction that text in this script is written in
+* The usual direction that text in this script is written in
 * and more
 
 ```javascript
@@ -56,20 +63,24 @@ var ScriptInfo = require("<path-to-ilib>/lib/ScriptInfo.js");
 var si = new ScriptInfo("Latn");
 
 si.getCode()
-// 'Latn'
+// Latn
+
 si.getCodeNumber()
 // 215
+
 si.getName()
-// 'Latin'
+// Latin
+
 si.getScriptDirection()
-// 'ltr'
+// ltr
+
 ```
 ### Currency Info
 A information about a Currency is available via the [Currency](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/Currency.html) class: 
 Thigs that the Currency information instance can tell you:  
 * The ISO 4217 currency code
 * The locale for this currency
-* the name of the currency in English
+* The name of the currency in English
 * The sign commonly used to represent this currency.
 * and more
 
@@ -78,9 +89,10 @@ var Currency = require("<path-to-ilib>/lib/Currency.js");
 var cur = new Currency({code: "KRW"});
 
 cur.getName()
-// 'South Korean Won'
+// South Korean Won
+
 cur.getSign()
-// '₩'
+// ₩
 ```
 
 ### Timezone Info
@@ -91,9 +103,11 @@ var TimeZone = require("<path-to-ilib>/lib/TimeZone.js");
 var tz = new TimeZone({id: "America/Los_Angeles"});
 
 tz.getCountry()
-// 'US'
+// US
+
 tz.getDisplayName()
-// 'PST'
+// PST
+
 tz.getDSTSavings()
 // { h: 1 }
 ```

@@ -21,10 +21,18 @@ Date and time formatting is done through the [DateFmt](https://ilib-js.github.io
 controlling how the formatter behaves Call the [format()](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateFmt.html#format) method of the formatter as many times as you want to format dates with those options
 
 ```javascript
-var DateFmt = require("<path-to-ilib>/lib/DateFmt.js")
+var DateFactory = require("<path-to-ilib>/lib/DateFactory");
+var date = new Date(2021, 7, 20);
 
-var fmt = new DateFmt();
-var d = fmt.format(date);
+var fmt = new DateFmt({locale:"ko-KR", length:"full"});
+fmt.format(date);
+// 2021년 8월 20일
+
+var fmt = new DateFmt({locale:"en-US", length:"full"});
+// August 19, 2021
+
+var fmt = new DateFmt({locale:"en-GB", length:"full"});
+// 19 August 2021
 ```
 
 #### Date/Time Formatting Options
@@ -32,28 +40,41 @@ There are options to control:
 If you see more in detail, Please visit the [link](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateFmt.html).
 * locale: Which locale to use
 * type: Format the date only, time only, or both the date and time together
-* clock: Use the 12- or 24-hour clock, or use the default for the locale
-* length: Use short-, medium-, long-, or full-length text for components that use words.
+* clock: Use the 12 or 24 hour clock, or use the default for the locale
+* length: Use short, medium, long, or full length text for components that use words.
 * and more
+
 ```javascript
 var DateFactory=require("<path-to-ilib>/lib/DateFactory");
 var DateFmt = require("<path-to-ilib>/lib/DateFmt.js")
-var date=DateFactory({year:2021, month:3, day:4, hour:14, minute:19});
+
+var date= DateFactory({year:2021, month: 8, day:22, hour:15, minute: 22});
+
+var fmt = new DateFmt({
+   locale: "en-US",
+   type: "datetime",
+   length: "full",
+   timezone: "local"
+});
+var result = fmt.format(date);
+// August 22, 2021 at 3:22 PM
 
 var fmt = new DateFmt({
    locale: "ko-KR",
-   type: "datetime",
+   date: "dmwy",
    length: "short",
    timezone: "local"
 });
-var d = fmt.format(date);
-// 21. 3. 4. 오후 2:19
+
+var result = fmt.format(date);
+// 21. 8. 22. 일
 ```
 
 ### Date-related Formatting
 
 #### Date RangeRange
-Date/time ranges are periods of time with a specific start and end points Can be formatted using the [DateRngFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateRngFmt.html) class
+Date/time ranges are periods of time with a specific start and end points 
+It Can be formatted using the [DateRngFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DateRngFmt.html) class
 Example output: "Mar 11-14, 2013"
 
 ``` javascript
@@ -69,7 +90,8 @@ var d = fmt.format(start, end);
 ```
 #### Duration
 
-Durations are a measure of how long something took to happen Can be formatted using the [DurFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DurationFmt.html) class
+Durations are a measure of how long something took to happen 
+It Can be formatted using the [DurFmt](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/DurationFmt.html) class
 Example output: "36 hours, 24 minutes, and 37 seconds"
 
 ``` javascript
@@ -94,14 +116,25 @@ var result = fmt.format({
 
 #### Calendar Conversion
 iLib supports dates in multiple calendaring systems:  
- `Coptic`,`Ethiopic`, `Gregorian`, `Han`, `Hebrew`, `Islamic`, `Julian`, `Persian`, `PersianAlgo`, `ThaiSolar`
+ * Coptic
+ * Ethiopic
+ * Gregorian
+ * Han
+ * Hebrew
+ * Islamic
+ * Julian
+ * Persian
+ * PersianAlgo
+ * ThaiSolar
+ 
 Default is the familiar Gregorian calendar  
 Create dates using the factory method or using the calendar dates directly:
+
 ```javascript
 var HebrewDate = require("<path-to-ilib>/lib/HebrewDate.js")
 var now = new HebrewDate();
 
-// This is This is equivalent to the factory method:
+// This is equivalent to the factory method:
 var DateFactory = require("<path-to-ilib>/lib/DateFactory.js")
 var now = DateFactory({type: "hebrew"});
 ```
@@ -129,16 +162,18 @@ var days = cal.getMonLength(2, year);
 var DateFactory = require("<path-to-ilib>/lib/DateFactory.js");
 var DateFmt = require("<path-to-ilib>/lib/DateFmt.js");
 
-var now = DateFactory({
-   type: "hebrew"
+var date= DateFactory({
+   year:2021,
+   month: 8,
+   day:20,
+   hour:15,
+   minute: 22,
+   type:"gregorian"
 });
-var fmt = new DateFmt({
-   length: "full",
-   locale: "en-US",
-   calendar: "hebrew"
-});
-var d = fmt.format(date);
-// Adar 19, 5781
+
+var fmt=new DateFmt({locale:"am-ET", length:"full"}); // The default calendar is Ethiopic
+var reesult = fmt.format(date);
+// 14 ነሐሴ 2013
 ```
 
 ### Numbers
@@ -215,7 +250,7 @@ uf.format(m1)
 ```javascript
 var m1 = MeasurementFactory({unit: "hectare", amount: 100});
          
-var uf = new UnitFmt({locale:"en-US",autoScale:true, autoConvert:false});
+var uf = new UnitFmt({locale:"en-US", autoScale:true, autoConvert:false});
 var str = uf.format(m1);
 // 1 square kilometer
 ```

@@ -23,6 +23,20 @@ UTC is the world’s time standard. This means that the time in every other part
 
 For example, the time in Seoul, It can always be obtained by adding 9 hours  to the current time in UTC. So the time here can be expressed as _UTC+09:00_.
 
+Javascript date **[getTimezoneOffset()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset)** method returns the time-zone offset in minutes for the current locale.  
+The timezone offset is the minutes in difference, the UTC is relative to your locale time.
+
+For example, if your time zone is UTC+09:00, -540 will be returned. Daylight savings time prevents this value from being a constant.
+
+``` javascript
+> var date = new Date()
+> date
+//`Fri Apr 30 2021 14:52:14 GMT+0900 (Korean Standard Time)`
+> date.getTimezoneOffset()
+//-540
+```
+
+
 #### The Difference Between GMT and UTC
 Greenwich Mean Time (GMT) is often interchanged or confused with Coordinated Universal Time (UTC). But GMT is a time zone and UTC is a time standard. Let's checkout the [current UTC](https://www.timeanddate.com/worldclock/timezone/utc)
 
