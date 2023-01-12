@@ -51,7 +51,7 @@ Things that the locale information instance can tell you:
 
 ### Script Info
 A information about a Script is available via the [ScriptInfo](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/ScriptInfo.html) class:  
-Thigs that the Script information instance can tell you:  
+Things that the Script information instance can tell you:  
 * The 4-letter ISO 15924 identifier 
 * The ISO 15924 code number
 * The name of this script in English
@@ -77,7 +77,7 @@ si.getScriptDirection()
 ```
 ### Currency Info
 A information about a Currency is available via the [Currency](https://ilib-js.github.io/iLib/docs/api/jsdoc/symbols/Currency.html) class: 
-Thigs that the Currency information instance can tell you:  
+Things that the Currency information instance can tell you:  
 * The ISO 4217 currency code
 * The locale for this currency
 * The name of the currency in English
@@ -111,7 +111,7 @@ tz.getDisplayName()
 tz.getDSTSavings()
 // { h: 1 }
 ```
-Thigs that the TimeZone information instance can tell you:  
+Things that the TimeZone information instance can tell you:  
 * The ISO 3166 code of the country for which this time zone is defined.
 * The amount of time in hours:minutes that the clock is advanced during daylight savings time.
 * The offset of this time zone from UTC at the given date/time.
